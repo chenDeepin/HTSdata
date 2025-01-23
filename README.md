@@ -20,7 +20,7 @@ Documentation for HTS Data Processing Application
     ├── main.exe                    # For Windows users
     └── main.py                     # For terminal via python
 
-4. Installation (optinal for python)
+4. Installation (optional for python)
     1) Set up a conda environment from requirements.txt
         conda env create -n HTSdata -f requirements.txt # Install dependencies
     2) Run the project
@@ -44,9 +44,9 @@ Documentation for HTS Data Processing Application
         (2) Calculate: Click the "Calculate" button to perform the calculation and display the results.
     4) Saving Results
         (1) Save Template: Save the current processing parameters as a JSON template file.
-        (2) Save Results: Save the processed data back to Excel files with _processed appended to the original filenames.
+        (2) Save Results: Save the processed data to Excel files with _processed appended to the original filenames.
 
-7. Control regions and abbreviation in equation
+7. Control regions and abbreviations in the equation
     pos: positive control regions (averaged value in equation)
     neg: negative control regions(averaged value in equation)
     blank: blank control regions (averaged value in equation, often for DMSO or vehicle)
