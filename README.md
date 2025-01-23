@@ -1,8 +1,10 @@
 Documentation for HTS Data Processing Application
 1. Overview
+   
     This application is designed to process High-Throughput Screening (HTS) data using a web-based interface built with Dash, a Python framework for building analytical web applications. The application allows users to upload Excel files, define regions of interest, assign control regions, and perform calculations based on user-defined equations. The results can be saved back to Excel files.
 
 2. Functional Description
+   
     1) File Upload: Users can upload multiple Excel files and a template file (JSON format) to define the processing parameters.
     2) Region Selection: Users can specify start and end regions within the Excel files to focus on specific data ranges.
     3) Control Region Assignment: Users can define positive, negative, blank, and none control regions within the selected data range.
@@ -11,16 +13,21 @@ Documentation for HTS Data Processing Application
     6) Save Functionality: Users can save the processing template and the processed results back to Excel files.
 
 3. Architecture of this project(for python scripts)
+   
     /project-root
+   
     │
+   
     ├── app.py                      # Dash application
+   
     ├── requirements.txt            # Python dependencies
-    ├── README.md                   # Project documentation
-    ├── main                        # For Linux/Mac users
-    ├── main.exe                    # For Windows users
+   
+    ├── README.md                   # Project documentation   
+   
     └── main.py                     # For terminal via python
 
-4. Installation (optional for python)
+4. Installation
+   
     1) Set up a conda environment from requirements.txt
         conda env create -n HTSdata -f requirements.txt # Install dependencies
     2) Run the project
@@ -29,10 +36,8 @@ Documentation for HTS Data Processing Application
         python main.py # Run from terminal
     3) Process in browser
 
-5. Run the program
-	Run main for Mac or Linux system; exe file for Windows
-
-6. HTSData processing pipeline
+5. HTSData processing pipeline
+    
     1) Uploading Files:
         (1) Upload Template File: Drag and drop or select a JSON template file that contains predefined processing parameters.
         (2) Upload Data Files: Drag and drop or select one or more Excel files containing the data to be processed.
@@ -46,14 +51,20 @@ Documentation for HTS Data Processing Application
         (1) Save Template: Save the current processing parameters as a JSON template file.
         (2) Save Results: Save the processed data to Excel files with _processed appended to the original filenames.
 
-7. Control regions and abbreviations in the equation
+6. Control regions and abbreviations in the equation
+    
     pos: positive control regions (averaged value in equation)
+   
     neg: negative control regions(averaged value in equation)
+   
     blank: blank control regions (averaged value in equation, often for DMSO or vehicle)
+   
     none: irrelevant regions
+   
     sample: cells in data range (including pos, neg, and blank without none)
 
 8. Example Template File
+   
     {
         "start_region": "B2",
         "end_region": "AV10",
